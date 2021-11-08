@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using demo.Models;
-
+namespace demo.Data{
     public class ApplicationDBContext : DbContext
     {
         public ApplicationDBContext (DbContextOptions<ApplicationDBContext> options)
@@ -14,3 +14,6 @@ using demo.Models;
 
         public DbSet<demo.Models.Movie> Movie { get; set; }
     }
+
+}
+    

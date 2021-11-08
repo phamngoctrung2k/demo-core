@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using demo.Data;
 
 namespace demo
 {
@@ -28,8 +30,11 @@ namespace demo
         {
             services.AddControllersWithViews();
             services.AddDbContext<ApplicationDBContext>(options =>
+           
+            
+    
         {
-            var connectionString = Configuration.GetConnectionString("ApplicationContext");
+            var connectionString = Configuration.GetConnectionString("NetMVCContext");
 
             if (Environment.IsDevelopment())
             {
