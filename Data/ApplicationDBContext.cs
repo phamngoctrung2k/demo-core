@@ -13,6 +13,14 @@ namespace demo.Data{
         }
 
         public DbSet<demo.Models.Movie> Movie { get; set; }
+
+        public DbSet<demo.Models.Product> Product { get; set; }
+
+        public DbSet<demo.Models.Student> Student { get; set; }
+
+        public DbSet<demo.Models.Person> Person { get; set; }
+
+        public DbSet<demo.Models.Employee> Employee { get; set; }
     }
 
 }
