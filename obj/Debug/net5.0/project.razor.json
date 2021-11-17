@@ -15664,6 +15664,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Create.cshtml",
+      "TargetPath": "Views\\HoaDon\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\Student\\Edit.cshtml",
       "TargetPath": "Views\\Student\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15684,6 +15689,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Delete.cshtml",
+      "TargetPath": "Views\\HoaDon\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\Student\\Create.cshtml",
       "TargetPath": "Views\\Student\\Create.cshtml",
       "FileKind": "mvc"
@@ -15696,6 +15706,11 @@
     {
       "FilePath": "d:\\net core\\demo\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Edit.cshtml",
+      "TargetPath": "Views\\HoaDon\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15786,6 +15801,16 @@
     {
       "FilePath": "d:\\net core\\demo\\Views\\Person\\Index.cshtml",
       "TargetPath": "Views\\Person\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Index.cshtml",
+      "TargetPath": "Views\\HoaDon\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Details.cshtml",
+      "TargetPath": "Views\\HoaDon\\Details.cshtml",
       "FileKind": "mvc"
     }
   ],

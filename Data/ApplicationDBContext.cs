@@ -21,6 +21,8 @@ namespace demo.Data{
         public DbSet<demo.Models.Person> Person { get; set; }
 
         public DbSet<demo.Models.Employee> Employee { get; set; }
+
+        public DbSet<demo.Models.HoaDon> HoaDon { get; set; }
     }
 
 }

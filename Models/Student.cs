@@ -1,17 +1,24 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace demo.Models
 {
-    public class Student
+    
+    public class Student : Person
     {
-        [Key]
-        public string StudentID { get; set; }
-        public string StudentName { get; set; }
+        public string University { get; set; }
         public string PhoneNumber { get; set; }
+        public string Address { get; set; }
 
     }
 }
+
+
+
+
+
+
 //(Tạo đối tượng Person (PersonID (string) và PersonName(string))
 //Tạo đối tượng Student (StudentID, StudentName, Address)
 ///Tạo đối tượng Employee (EmployeeID, EmployeeName, PhoneNumber)

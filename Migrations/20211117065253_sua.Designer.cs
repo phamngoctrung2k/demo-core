@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using demo.Data;
 
 namespace demo.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211117065253_sua")]
+    partial class sua
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -30,25 +32,6 @@ namespace demo.Migrations
                     b.HasKey("EmployeeID");
 
                     b.ToTable("Employee");
-                });
-
-            modelBuilder.Entity("demo.Models.HoaDon", b =>
-                {
-                    b.Property<int>("HoaDonID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("NgayTao")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PersonID")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("HoaDonID");
-
-                    b.HasIndex("PersonID");
-
-                    b.ToTable("HoaDon");
                 });
 
             modelBuilder.Entity("demo.Models.Movie", b =>
@@ -131,15 +114,6 @@ namespace demo.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator().HasValue("Student");
-                });
-
-            modelBuilder.Entity("demo.Models.HoaDon", b =>
-                {
-                    b.HasOne("demo.Models.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonID");
-
-                    b.Navigation("Person");
                 });
 #pragma warning restore 612, 618
         }
