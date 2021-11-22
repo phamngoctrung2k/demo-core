@@ -2,40 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using demo.Data;
 
 namespace demo.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211117130324_abc")]
+    partial class abc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
-
-            modelBuilder.Entity("demo.Models.ChuNhiem", b =>
-                {
-                    b.Property<string>("PersonID")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PersonID1")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TeacherName")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("PersonID");
-
-                    b.HasIndex("PersonID1");
-
-                    b.ToTable("ChuNhiem");
-                });
 
             modelBuilder.Entity("demo.Models.Employee", b =>
                 {
@@ -152,36 +133,6 @@ namespace demo.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator().HasValue("Student");
-                });
-
-            modelBuilder.Entity("demo.Models.Teacher", b =>
-                {
-                    b.HasBaseType("demo.Models.Person");
-
-                    b.Property<string>("Address")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Teacher_Address");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Teacher_PhoneNumber");
-
-                    b.Property<string>("University")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("Teacher_University");
-
-                    b.ToTable("Person");
-
-                    b.HasDiscriminator().HasValue("Teacher");
-                });
-
-            modelBuilder.Entity("demo.Models.ChuNhiem", b =>
-                {
-                    b.HasOne("demo.Models.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonID1");
-
-                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("demo.Models.HoaDon", b =>

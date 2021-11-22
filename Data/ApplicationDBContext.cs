@@ -23,6 +23,10 @@ namespace demo.Data{
         public DbSet<demo.Models.Employee> Employee { get; set; }
 
         public DbSet<demo.Models.HoaDon> HoaDon { get; set; }
+
+        public DbSet<demo.Models.Teacher> Teacher { get; set; }
+
+        public DbSet<demo.Models.ChuNhiem> ChuNhiem { get; set; }
     }
 
 }

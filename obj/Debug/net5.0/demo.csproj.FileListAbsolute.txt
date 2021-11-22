@@ -195,3 +195,13 @@ D:\net core\demo\obj\Debug\net5.0\Razor\Views\HoaDon\Delete.cshtml.g.cs
 D:\net core\demo\obj\Debug\net5.0\Razor\Views\HoaDon\Details.cshtml.g.cs
 D:\net core\demo\obj\Debug\net5.0\Razor\Views\HoaDon\Edit.cshtml.g.cs
 D:\net core\demo\obj\Debug\net5.0\Razor\Views\HoaDon\Index.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\Teacher\Create.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\Teacher\Delete.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\Teacher\Details.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\Teacher\Edit.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\Teacher\Index.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\ChuNhiems\Create.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\ChuNhiems\Delete.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\ChuNhiems\Details.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\ChuNhiems\Edit.cshtml.g.cs
+D:\net core\demo\obj\Debug\net5.0\Razor\Views\ChuNhiems\Index.cshtml.g.cs

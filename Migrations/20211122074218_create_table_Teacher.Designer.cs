@@ -2,40 +2,21 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using demo.Data;
 
 namespace demo.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211122074218_create_table_Teacher")]
+    partial class create_table_Teacher
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.0");
-
-            modelBuilder.Entity("demo.Models.ChuNhiem", b =>
-                {
-                    b.Property<string>("PersonID")
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("NgaySinh")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("PersonID1")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("TeacherName")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("PersonID");
-
-                    b.HasIndex("PersonID1");
-
-                    b.ToTable("ChuNhiem");
-                });
 
             modelBuilder.Entity("demo.Models.Employee", b =>
                 {
@@ -173,15 +154,6 @@ namespace demo.Migrations
                     b.ToTable("Person");
 
                     b.HasDiscriminator().HasValue("Teacher");
-                });
-
-            modelBuilder.Entity("demo.Models.ChuNhiem", b =>
-                {
-                    b.HasOne("demo.Models.Person", "Person")
-                        .WithMany()
-                        .HasForeignKey("PersonID1");
-
-                    b.Navigation("Person");
                 });
 
             modelBuilder.Entity("demo.Models.HoaDon", b =>

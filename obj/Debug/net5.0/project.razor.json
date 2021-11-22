@@ -15619,8 +15619,23 @@
   "RootNamespace": "demo",
   "Documents": [
     {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiems\\Index.cshtml",
+      "TargetPath": "Views\\ChuNhiems\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\Movies\\Delete.cshtml",
       "TargetPath": "Views\\Movies\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiems\\Delete.cshtml",
+      "TargetPath": "Views\\ChuNhiems\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\Teacher\\Index.cshtml",
+      "TargetPath": "Views\\Teacher\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15664,6 +15679,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiem\\Edit.cshtml",
+      "TargetPath": "Views\\ChuNhiem\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\HoaDon\\Create.cshtml",
       "TargetPath": "Views\\HoaDon\\Create.cshtml",
       "FileKind": "mvc"
@@ -15674,8 +15694,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\net core\\demo\\Views\\Teacher\\Delete.cshtml",
+      "TargetPath": "Views\\Teacher\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\Product\\Edit.cshtml",
       "TargetPath": "Views\\Product\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\Teacher\\Create.cshtml",
+      "TargetPath": "Views\\Teacher\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiem\\Create.cshtml",
+      "TargetPath": "Views\\ChuNhiem\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15744,6 +15779,21 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\net core\\demo\\Views\\Teacher\\Details.cshtml",
+      "TargetPath": "Views\\Teacher\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiem\\Details.cshtml",
+      "TargetPath": "Views\\ChuNhiem\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\Teacher\\Edit.cshtml",
+      "TargetPath": "Views\\Teacher\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\net core\\demo\\Views\\Movies\\Index.cshtml",
       "TargetPath": "Views\\Movies\\Index.cshtml",
       "FileKind": "mvc"
@@ -15751,6 +15801,16 @@
     {
       "FilePath": "d:\\net core\\demo\\Views\\Person\\Details.cshtml",
       "TargetPath": "Views\\Person\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiem\\Delete.cshtml",
+      "TargetPath": "Views\\ChuNhiem\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiems\\Create.cshtml",
+      "TargetPath": "Views\\ChuNhiems\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15766,6 +15826,11 @@
     {
       "FilePath": "d:\\net core\\demo\\Views\\Person\\Edit.cshtml",
       "TargetPath": "Views\\Person\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiems\\Edit.cshtml",
+      "TargetPath": "Views\\ChuNhiems\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15786,6 +15851,16 @@
     {
       "FilePath": "d:\\net core\\demo\\Views\\Movies\\Details.cshtml",
       "TargetPath": "Views\\Movies\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiems\\Details.cshtml",
+      "TargetPath": "Views\\ChuNhiems\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\net core\\demo\\Views\\ChuNhiem\\Index.cshtml",
+      "TargetPath": "Views\\ChuNhiem\\Index.cshtml",
       "FileKind": "mvc"
     },
     {

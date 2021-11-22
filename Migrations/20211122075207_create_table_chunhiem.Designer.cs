@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using demo.Data;
 
 namespace demo.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    partial class ApplicationDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211122075207_create_table_chunhiem")]
+    partial class create_table_chunhiem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,21 +20,18 @@ namespace demo.Migrations
 
             modelBuilder.Entity("demo.Models.ChuNhiem", b =>
                 {
-                    b.Property<string>("PersonID")
+                    b.Property<string>("TeacherName")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("NgaySinh")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("PersonID1")
+                    b.Property<string>("PersonID")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("TeacherName")
-                        .HasColumnType("TEXT");
+                    b.HasKey("TeacherName");
 
-                    b.HasKey("PersonID");
-
-                    b.HasIndex("PersonID1");
+                    b.HasIndex("PersonID");
 
                     b.ToTable("ChuNhiem");
                 });
@@ -179,7 +178,7 @@ namespace demo.Migrations
                 {
                     b.HasOne("demo.Models.Person", "Person")
                         .WithMany()
-                        .HasForeignKey("PersonID1");
+                        .HasForeignKey("PersonID");
 
                     b.Navigation("Person");
                 });
