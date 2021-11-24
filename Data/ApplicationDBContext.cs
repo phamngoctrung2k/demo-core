@@ -26,7 +26,7 @@ namespace demo.Data{
 
         public DbSet<demo.Models.Teacher> Teacher { get; set; }
 
-        public DbSet<demo.Models.ChuNhiem> ChuNhiem { get; set; }
+
     }
 
 }

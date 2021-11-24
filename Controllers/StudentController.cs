@@ -20,11 +20,35 @@ namespace demo.Controllers
         }
 
         // GET: Student
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Student.ToListAsync());
-        }
+  // GET: Movies
+public async Task<IActionResult> Index(string movieGenre, string searchString)
+{
+    // Use LINQ to get list of genres.
+    IQueryable<string> genreQuery = from m in _context.Student
+                                    orderby m.PersonID
+                                    select m.PersonID;
 
+    var students = from m in _context.Student
+                 select m;
+
+    if (!string.IsNullOrEmpty(searchString))
+    {
+        students = students.Where(s => s.University.Contains(searchString));
+    }
+
+    if (!string.IsNullOrEmpty(movieGenre))
+    {
+        students = students.Where(x => x.PersonID == movieGenre);
+    }
+
+    var movieGenreVM = new MovieGenreViewModel
+    {
+        Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
+        students = await students.ToListAsync()
+    };
+
+    return View(movieGenreVM);
+}
         // GET: Student/Details/5
         public async Task<IActionResult> Details(string id)
         {

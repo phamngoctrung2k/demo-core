@@ -18,21 +18,24 @@ namespace demo.Migrations
 
             modelBuilder.Entity("demo.Models.ChuNhiem", b =>
                 {
-                    b.Property<string>("PersonID")
+                    b.Property<string>("MaGv")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("NgaySinh")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("PersonID1")
+                    b.Property<string>("PersonID")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("TeacherName")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("PersonID");
+                    b.Property<string>("TenLop")
+                        .HasColumnType("TEXT");
 
-                    b.HasIndex("PersonID1");
+                    b.HasKey("MaGv");
+
+                    b.HasIndex("PersonID");
 
                     b.ToTable("ChuNhiem");
                 });
@@ -179,7 +182,7 @@ namespace demo.Migrations
                 {
                     b.HasOne("demo.Models.Person", "Person")
                         .WithMany()
-                        .HasForeignKey("PersonID1");
+                        .HasForeignKey("PersonID");
 
                     b.Navigation("Person");
                 });

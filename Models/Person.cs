@@ -8,7 +8,9 @@ namespace demo.Models
     public class Person
     {
         [Key]
+        [Required(ErrorMessage ="Khong dc de chong")]
         public string PersonID { get; set; }
+        
         public string PersonCode {get; set; }
         public string FullName { get; set; }
 

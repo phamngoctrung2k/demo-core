@@ -10,8 +10,8 @@ namespace demo.Models
         [Key]
         public int HoaDonID { get; set; }
         public string PersonID { get; set; }
-        
-        public DateTime NgayTao { get; set; }
+        [DataType(DataType.Date)]
+        public DateTime? NgayTao { get; set; }
         public Person Person{ get; set; }
 
     }

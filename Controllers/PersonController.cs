@@ -56,11 +56,18 @@ namespace demo.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("PersonID,PersonCode,FullName")] Person person)
         {
+        try{
             if (ModelState.IsValid)
             {
                 _context.Add(person);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            }
+
+        
+        }
+            catch{
+                ModelState.AddModelError("", "khóa chính trùng òy");
             }
             return View(person);
         }
