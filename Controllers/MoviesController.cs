@@ -72,6 +72,7 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
         public IActionResult Create()
         {
             return View();
+            
         }
 
         // POST: Movies/Create
@@ -79,16 +80,18 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+                
             }
             return View(movie);
         }
+        
 
         // GET: Movies/Edit/5
         public async Task<IActionResult> Edit(int? id)
@@ -111,8 +114,9 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
+            
             if (id != movie.Id)
             {
                 return NotFound();

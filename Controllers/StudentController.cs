@@ -21,12 +21,12 @@ namespace demo.Controllers
 
         // GET: Student
   // GET: Movies
-public async Task<IActionResult> Index(string movieGenre, string searchString)
+public async Task<IActionResult> Index(string studentAddress, string searchString)
 {
     // Use LINQ to get list of genres.
     IQueryable<string> genreQuery = from m in _context.Student
-                                    orderby m.PersonID
-                                    select m.PersonID;
+                                    orderby m.Address
+                                    select m.Address;
 
     var students = from m in _context.Student
                  select m;
@@ -36,18 +36,18 @@ public async Task<IActionResult> Index(string movieGenre, string searchString)
         students = students.Where(s => s.University.Contains(searchString));
     }
 
-    if (!string.IsNullOrEmpty(movieGenre))
+    if (!string.IsNullOrEmpty(studentAddress))
     {
-        students = students.Where(x => x.PersonID == movieGenre);
+        students = students.Where(x => x.Address == studentAddress);
     }
 
-    var movieGenreVM = new MovieGenreViewModel
+    var studentGenreVM = new StudentGenreViewModel
     {
-        Genres = new SelectList(await genreQuery.Distinct().ToListAsync()),
-        students = await students.ToListAsync()
+        Address = new SelectList(await genreQuery.Distinct().ToListAsync()),
+        Students = await students.ToListAsync()
     };
 
-    return View(movieGenreVM);
+    return View(studentGenreVM);
 }
         // GET: Student/Details/5
         public async Task<IActionResult> Details(string id)

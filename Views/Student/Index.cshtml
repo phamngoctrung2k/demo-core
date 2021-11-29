@@ -1,7 +1,7 @@
-@model demo.Models.MovieGenreViewModel
+@model demo.Models.StudentGenreViewModel
 
 @{
-    ViewData["PersonID"] = "Index";
+    ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
@@ -9,11 +9,11 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<form asp-controller="Student" asp-action="Index">
-    <p> <select asp-for="MovieGenre" asp-items="Model.Genres">
+<form asp-controller="Student" asp-action="Index"> 
+    <p> <select asp-for="StudentAddress" asp-items="Model.Address">
             <option value="">All</option>
         </select>
-        PersonID: <input type="text" name="SearchString" />
+        University: <input type="text" name="SearchString" />
         <input type="submit" value="Filter" />
     </p>
 </form>
@@ -21,25 +21,26 @@
     <thead>
         <tr>
             <th>
-                 @Html.DisplayNameFor(model => model.students[0].University)
+                 @Html.DisplayNameFor(model => model.Students[0].University)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.students[0].PhoneNumber)
+                @Html.DisplayNameFor(model => model.Students[0].PhoneNumber)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.students[0].Address)
+                @Html.DisplayNameFor(model => model.Students[0].Address)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.students[0].PersonCode)
+                @Html.DisplayNameFor(model => model.Students[0].PersonCode)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.students[0].FullName)
+                @Html.DisplayNameFor(model => model.Students[0].FullName)
             </th>
+            
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.students)
+@foreach (var item in Model.Students)
  {
         <tr>
             <td>
